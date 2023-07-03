@@ -1,0 +1,19 @@
+﻿@model BirtdayApp.Models.DavetiyeModel
+@{
+    ViewBag.Title = "Teşekkür Ederim";
+}
+
+<h1>Teşekkürler,@Model.Ad!</h1>
+<div class="lead">
+    @if (Model.KatilmaDurumu == true)
+    {
+        @:Gelmene çok sevindim :) Bütün Hazırlıklar tamamlandı..!
+        @Html.Action("Katilanlar", "Home")
+    }
+    else
+    {
+        @:Gelemeyecek olamana üzüldüm :( Bunu bildirdiğin için teşekkür ederiz.
+    }
+
+</div>
+
